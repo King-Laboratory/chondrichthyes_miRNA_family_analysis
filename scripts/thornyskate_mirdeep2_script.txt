@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --account=youraccount
+#SBATCH --job-name=thornyskate_mirdeep2
+#SBATCH --time=15:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=youremail@email.edu
+
+date
+
+module load mirdeep2/2.0.0.8
+
+cd /pathto/mirdeep2
+
+/pathto/mirdeep2/bin/miRDeep2.pl /pathto/thornyskate/total_reads_collapsed.fa /pathto/thornyskate/thorny_skate.fasta /pathto/thornyskate/total_reads_collapsed_vs_genome.arf none none none
+
+date

@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --account=youraccount
+#SBATCH --job-name=thornyskate_index
+#SBATCH --time=05:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=youremail@email.edu
+
+date
+
+cd /pathto/thornyskate/
+
+/pathto/mirdeep2/bin/bowtie-build /pathto/thornyskate/cleaned_thorny_skate.fasta post_indexed_thorny_skate
+ec=`echo $?`
+if [ $ec != 0 ];then
+        echo An error occured, exit code $ec
+fi
+
+date

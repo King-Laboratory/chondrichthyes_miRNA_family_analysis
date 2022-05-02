@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --account=youraccount
+#SBATCH --job-name=genome_cleanup
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=youremail@email.edu
+
+date
+
+cd /pathto/thornyskate/
+
+#Get rid of things that mirdeep doesnt like
+sed -e 's/, whole genome shotgun sequence//' -e 's/>NW/>nw/g' -e 's/>NC/>nc/g' -e 's/Amblyraja/amblyraja/' -e 's/CabotCenter/cabotcenter
+/' -e 's/sAmbRad/sambrad/' -e 's/SUPER/super/' -e 's/pri S/pri s/' -e 's/[,]//g' -e 's/ /_/g' -e '/^</! s/[RYSWKMBDHV]/N/g' cp_GCF_01090
+9765.2_sAmbRad1.1.pri_genomic.fna > thorny_skate.fasta
+
+#Perl script to remove whitespaces
+perl -plane 's/\s+.+$//' < thorny_skate.fasta > cleaned_thorny_skate.fasta
+
+date

@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --account=youraccount
+#SBATCH --job-name=thornyskate_mapper
+#SBATCH --time=10:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=youremail@email.edu
+
+date
+
+module load mirdeep2/2.0.0.8
+
+cd /pathto/thornyskate/
+
+/pathto/mirdeep2/bin/mapper.pl /pathto/samples/all_ST29_samples.fastq -e -h -j -k AGATCGGAAGAGCACACGTCTGAA
+CTCC -l 17 -m -p post_indexed_thorny_skate -s total_reads_collapsed.fa -t total_reads_collapsed_vs_genome.arf -v -n
+
+date
