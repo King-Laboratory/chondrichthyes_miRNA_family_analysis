@@ -43,8 +43,7 @@ Elephant Shark, Callorhinchus milii: https://www.ncbi.nlm.nih.gov/data-hub/assem
 This analysis is broken into two main portions: identifying known and novel miRNAs using MirDeep2 and classifying known miRNAs with Blast. For all scripts and workflows, I will be using the Thorny Skate as the example but file names can be substituted for the appropriate species. 
 
 MirDeep2 Documentation: https://github.com/rajewsky-lab/mirdeep2/blob/master/documentation.html
-
-MirDeep2 Workflow: 
+ 
 ![MirDeep2 Workflow](images/mirdeepworkflow.png)
 
 1. Download reference sequences for publicly available skate, ray, and shark genomes and upload to cluster.
