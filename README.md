@@ -82,6 +82,10 @@ The PA matrix shows the relationship among the species analyzed in regards to th
 
 ![PA Matrix](images/shskray_mirna_tree.png)
 
+A second PA matrix was constructed where all cloudy catshark miRNAs were demarked as 1 (having the miRNA families from the known cloudy catshark MirGeneDB database). This matrix can be found under /blast_results/PA_Matrix - PA_ccs_Matrix.csv). Further study will be conducted to understand possible reasons why the cloudy catshark reference genome from NCBI yeilded different miRNA family results than the MirGeneDB cloudy catshark miRNAs. 
+
+![Cloudy Catshark PA Matrix](images/shskray_mirna_ccs_tree.png)
+
 A table was made to show the percent conserved and novel miRNAs discovered across all species:
 ![Novel vs Known miRNAs](images/novel_known_table.png)
 
