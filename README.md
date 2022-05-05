@@ -79,6 +79,7 @@ Note: It is good practice at this point to conduct a reciprocal blast by repeati
 The annotation step above will generate a .tsv file that will list what miRNAs that were detected from MirDeep2 belongs to what miRNA family known from the known miRNA database used from the Blast. At this point, data from this annotated file can be joined with the raw data from the MirDeep2 .bed file with novel precursors to identify unique or known miRNA families discovered in the sample and construct a PA matrix using the PA matrix phangorn script (scripts/phangorn_ape_mathod.R).
 
 The PA matrix shows the relationship among the species analyzed in regards to their conserved miRNA families, the matrix file can be found under /blast_results/PA_Matrix - PA_Matrix.csv. 
+
 ![PA Matrix](images/shskray_mirna_tree.png)
 
 A table was made to show the percent conserved and novel miRNAs discovered across all species:
